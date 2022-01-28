@@ -142,15 +142,44 @@ class AddressBook
     + "\nAddress: " + this.address
     + "\nCity: " + this.city + "\nState: "
     + this.state + "\nZip: " + this.zip
-    + "\nPhone Number: " + this.phoneNumber + "\nEmail: " + this.email;
+    + "\nPhone Number: " + this.phoneNumber + "\nEmail: " + this.email + "\n";
    }
 }
 
-//creating an instance and giving contact details
 try 
 {
-  let contactBook = new AddressBook("Gunasekhar", "Satharajupalli", "JubileeHills", "Hyderabad", "Telangana", "543216", "9848032919", "gunanani999@gmail.com");
-  console.log(contactBook.toString());
+      let ContactsArray = new Array();
+      ContactsArray.push
+      (
+        new AddressBook
+        (
+            "Johnson", "Putla", "Chinaravuru", "Tenali", "AndhraPradesh", "573438", "7789756478", "johnsonsunny987@gmail.com"
+        )
+      );
+      ContactsArray.push
+      (
+        new AddressBook
+        (
+          "Rakesh", "Guptha", "RailwayStreet", "Tirupathi", "AndhraPradesh", "564789", "8765436789", "rkguptha@gmail.com"
+        )
+      );
+      ContactsArray.push
+      (
+        new AddressBook
+        (
+            "Mohan", "Kumar", "MainStreet", "Hyderabad", "Telangana", "500534", "9874982708", "mohan@gmail.com"
+        )
+      );
+      ContactsArray.push
+      (
+        new AddressBook
+        (
+          "Durga", "Bhavani", "BusStandRoad", "Warangal", "Telangana", "504534", "8838375333", "db1777@gmail.com"
+        )
+      );
+      ContactsArray.forEach((contactBook) =>
+        console.log(contactBook.toString())
+      );
 } 
 catch (e) 
 {
